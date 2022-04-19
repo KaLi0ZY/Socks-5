@@ -6,13 +6,6 @@ cd "$(
     cd "$(dirname "$0")" || exit
     pwd
 )" || exit
-
-#====================================================
-#	System Request:Ubuntu 20.04+/Centos 7+
-#	Author:	zhangyu
-#	Dscription: ss5 install
-#	email:1853479098@qq.com
-#====================================================
 #fonts color
 Green="\033[32m"
 Red="\033[31m"
@@ -157,7 +150,7 @@ stop_ss5(){
 }
 
 connect() {
-	IP=$(curl https://api-ipv4.ip.sb/ip)
+	IP=$(curl api-ipv4.ip.sb/ip)
 	echo "IP: $IP"
 	echo "端口：$port"
 	echo "账户：$user"
@@ -187,17 +180,16 @@ install() {
 
 menu() {
     echo -e "\t ss5 安装管理脚本 "
-    echo -e "\t---authored by zhangyu---"
-    echo -e "\thttps://www.zhangyu.ml"
-    echo -e "\tSystem Request:Debian 9+/Ubuntu 20.04+/Centos 7+"
-    echo -e "\t无法使用请联系1853479098@qq.com\n"
+    echo -e "\t---authored by Reckless梓耀---"
+    echo -e "\thttps://www.byvps.com"
+    echo -e "\t支持系统:Debian 9+/Ubuntu 20.04+/Centos 7+"
 
     echo -e "—————————————— 安装向导 ——————————————"
     echo -e "${Green} 搭建 ss5 站群 多IP多出口 联系QQ2966734846${Font}"
     echo -e "${Red} 搭建 ss5 站群 多IP多出口 联系QQ2966734846${Font}"
     echo -e "${Green}1.${Font}  安装ss5"
     echo -e "${Green}2.${Font}  停止ss5(停止要卡住30秒，请等待)"
-    echo -e "${Green}3.${Font}  安装Shadowsocks"
+    echo -e "${Green}3.${Font}  安装Shadowsocks(已停止！)"
     echo -e "${Green}9.${Font}  安装 4合1 bbr 锐速安装脚本"
     echo -e "${Green}99.${Font}  退出 \n"
 
